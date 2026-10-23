@@ -23,6 +23,7 @@ jobs:
         with:
           # Install a specific version of uv.
           version: "0.13.5"
+          working-directory: /home/runner
 
       # You can test your matrix by printing the current Python version
       - name: Display Python version
