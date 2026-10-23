@@ -24,6 +24,8 @@ jobs:
           # Install a specific version of uv.
           version: "0.13.5"
 
-      # You can test your matrix by printing the current Python version
-      - name: Display Python version
+      - name: Sync the project environment
+        run: uv sync
+
+      - name: Run tests
         run: uv run pytest --nbval-lax 00-is-it-a-bird-creating-a-model-from-your-own-data.ipynb
